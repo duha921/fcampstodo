@@ -74,6 +74,7 @@ function updateUI(todos) {
 
   // select all the buttons with class name of REMOVE
   let buttons = document.getElementsByClassName('remove')
+  let Tests = document.getElementsByClassName('todo')
 
   // loop through all buttons and add click event to it
   for (let index = 0; index < buttons.length; index++) {
@@ -81,7 +82,18 @@ function updateUI(todos) {
     buttons[index].addEventListener('click', (event)=>{
       removeItem(todos, event.target.id)
     })    
-
+ests[index].addEventListener('click', (event)=>{
+      console.log(event);
+      if(event.target.className ==="text unchecked"){
+        event.target.className = " text checked" ;
+        console.log("text unchecked" ) ;
+      }else{
+      if (event.target.className ==="text checked"){
+        event.target.className = "test unchecked" ;
+        console.log("text checked"  ) ;
+      }}
+    })
+  }
   }
 
 
